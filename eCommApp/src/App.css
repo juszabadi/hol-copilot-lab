@@ -39,6 +39,31 @@
   transform: translateY(-2px);
 }
 
+.app-header nav .contact-us-trigger {
+  color: white;
+  font: inherit;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.app-header nav .contact-us-trigger:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.app-header nav .contact-us-trigger:focus-visible,
+.contact-modal button:focus-visible,
+.contact-modal input:focus-visible,
+.contact-modal textarea:focus-visible {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
+}
+
 .main-content {
   flex: 1;
   display: flex;
@@ -226,6 +251,61 @@
   position: relative;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   color: #333;
+}
+
+.contact-modal {
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+
+.contact-modal h2 {
+  margin: 0 2rem 1.5rem 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button,
+.contact-confirmation button {
+  align-self: flex-start;
+  padding: 0.65rem 1.25rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #667eea;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-confirmation button:hover {
+  background-color: #5a6fd8;
+}
+
+.contact-confirmation p {
+  margin-bottom: 1.5rem;
 }
 
 .close-button {
